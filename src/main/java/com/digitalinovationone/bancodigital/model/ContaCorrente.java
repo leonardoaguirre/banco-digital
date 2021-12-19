@@ -1,21 +1,17 @@
 package com.digitalinovationone.bancodigital.model;
 
-import interfaces.IConta;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 
-public class ContaCorrente implements IConta {
+public class ContaCorrente extends Conta {
 
-    @Override
-    public double sacar(double valor) {
-        return 0;
+    public ContaCorrente(Cliente cliente) {
+        super(cliente);
     }
 
     @Override
-    public double depositar(double valor) {
-        return 0;
-    }
-
-    @Override
-    public double transferir(double valor, IConta destino) {
-        return 0;
+    public void imprimirExtrato() {
+        System.out.println("::::Extrato conta corrente::::");
+       super.imprimirInfosComuns();
     }
 }
