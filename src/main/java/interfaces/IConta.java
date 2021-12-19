@@ -1,9 +1,11 @@
 package interfaces;
 
 public interface IConta {
-    double sacar(double valor);
+    void sacar(double valor);
 
-    double depositar(double valor);
+    void depositar(double valor);
 
-    double transferir(double valor, IConta destino);
+    void transferir(double valor, IConta destino);
+
+    void imprimirExtrato();
 }
